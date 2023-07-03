@@ -3,10 +3,15 @@
     <h2>About</h2>
     <p>teste</p>
     <p>teste</p>
+    <div>
+      {{ data }}
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/ninja");
+</script>
 
 <style scoped>
 h2 {
